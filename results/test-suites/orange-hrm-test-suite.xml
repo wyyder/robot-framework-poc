@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.2 (Python 3.9.5 on win32)" generated="20210528 12:57:27.611" rpa="false" schemaversion="2">
+<suite id="s1" name="Orange-Hrm-Test-Suite" source="C:\Users\Wyyder\Documents\poc\robot-framework-poc\test-suites\orange-hrm-test-suite.robot">
+<test id="s1-t1" name="Login Test">
+<kw name="__Open OrangeHRM" library="login-page">
+<arg>${browser}</arg>
+<arg>${url}</arg>
+<kw name="_Open browser" library="browser">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>This keyword opens the browser &amp; launches the url</doc>
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<arg>PATH</arg>
+<arg>${EXECDIR}${/}library${/}drivers${/}</arg>
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<msg timestamp="20210528 12:57:27.893" level="INFO">Environment variable 'PATH' set to value 'C:\Users\Wyyder\Documents\poc\robot-framework-poc\venv\Scripts;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python39\Scripts\;C:\Python39\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\Wyyder\AppData\Local\Microsoft\WindowsApps;C:\Program Files\PyCharm\bin;;C:\VS Code\bin;C:\Users\Wyyder\AppData\Roaming\npm;C:\Users\Wyyder\.dotnet\tools;C:\Users\wyyder\AppData\Local\Android\Sdk\platform-tools;C:\Users\Wyyder\AppData\Local\Android\Sdk\tools;C:\Users\Wyyder\AppData\Local\Android\Sdk;C:\Program Files\Java\jdk1.8.0_271;C:\Users\Wyyder\AppData\Local\Android\Sdk\emulator;C:\Users\Wyyder\AppData\Local\Android\Sdk\tools\bin;C:\Users\Wyyder\AppData\Local\Android\Sdk\emulator\emulator;C:\Program Files\Java\jdk1.8.0_271\bin;;C:\Users\Wyyder\Documents\poc\robot-framework-poc\library\drivers\'.</msg>
+<status status="PASS" starttime="20210528 12:57:27.893" endtime="20210528 12:57:27.893"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210528 12:57:27.893" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<msg timestamp="20210528 12:57:28.446" level="DEBUG">POST http://127.0.0.1:62999/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}}</msg>
+<msg timestamp="20210528 12:57:28.447" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:62999</msg>
+<msg timestamp="20210528 12:57:29.212" level="DEBUG">http://127.0.0.1:62999 "POST /session HTTP/1.1" 200 753</msg>
+<msg timestamp="20210528 12:57:29.213" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210528 12:57:29.213" level="DEBUG">POST http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac/timeouts {"script": 5000}</msg>
+<msg timestamp="20210528 12:57:29.214" level="DEBUG">http://127.0.0.1:62999 "POST /session/71349a39dcd063226c1d6c3cd3fa96ac/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20210528 12:57:29.215" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210528 12:57:29.215" level="DEBUG">POST http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac/timeouts {"implicit": 0}</msg>
+<msg timestamp="20210528 12:57:29.216" level="DEBUG">http://127.0.0.1:62999 "POST /session/71349a39dcd063226c1d6c3cd3fa96ac/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20210528 12:57:29.217" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210528 12:57:29.217" level="DEBUG">POST http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac/url {"url": "https://opensource-demo.orangehrmlive.com/"}</msg>
+<msg timestamp="20210528 12:57:32.768" level="DEBUG">http://127.0.0.1:62999 "POST /session/71349a39dcd063226c1d6c3cd3fa96ac/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20210528 12:57:32.768" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210528 12:57:32.768" level="DEBUG">Opened browser with session id 71349a39dcd063226c1d6c3cd3fa96ac.</msg>
+<status status="PASS" starttime="20210528 12:57:27.893" endtime="20210528 12:57:32.769"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20210528 12:57:32.769" level="DEBUG">POST http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac/window/maximize {}</msg>
+<msg timestamp="20210528 12:57:32.883" level="DEBUG">http://127.0.0.1:62999 "POST /session/71349a39dcd063226c1d6c3cd3fa96ac/window/maximize HTTP/1.1" 200 51</msg>
+<msg timestamp="20210528 12:57:32.884" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20210528 12:57:32.769" endtime="20210528 12:57:32.884"/>
+</kw>
+<status status="PASS" starttime="20210528 12:57:27.893" endtime="20210528 12:57:32.884"/>
+</kw>
+<status status="PASS" starttime="20210528 12:57:27.893" endtime="20210528 12:57:32.884"/>
+</kw>
+<kw name="__Login to OrangeHRM" library="login-page">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="_Set text" library="browser">
+<arg>${username}</arg>
+<arg>@{txt_username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}[0]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210528 12:57:32.887" level="INFO">Typing text 'Admin' into text field 'xpath://input[@id="txtUsername"]'.</msg>
+<msg timestamp="20210528 12:57:32.888" level="DEBUG">POST http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac/elements {"using": "xpath", "value": "//input[@id=\"txtUsername\"]"}</msg>
+<msg timestamp="20210528 12:57:32.907" level="DEBUG">http://127.0.0.1:62999 "POST /session/71349a39dcd063226c1d6c3cd3fa96ac/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210528 12:57:32.907" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210528 12:57:32.907" level="DEBUG">POST http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac/element/f08013df-e878-44d0-9152-1740ec2c5a76/clear {"id": "f08013df-e878-44d0-9152-1740ec2c5a76"}</msg>
+<msg timestamp="20210528 12:57:32.951" level="DEBUG">http://127.0.0.1:62999 "POST /session/71349a39dcd063226c1d6c3cd3fa96ac/element/f08013df-e878-44d0-9152-1740ec2c5a76/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20210528 12:57:32.952" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210528 12:57:32.952" level="DEBUG">POST http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac/element/f08013df-e878-44d0-9152-1740ec2c5a76/value {"text": "Admin", "value": ["A", "d", "m", "i", "n"], "id": "f08013df-e878-44d0-9152-1740ec2c5a76"}</msg>
+<msg timestamp="20210528 12:57:33.023" level="DEBUG">http://127.0.0.1:62999 "POST /session/71349a39dcd063226c1d6c3cd3fa96ac/element/f08013df-e878-44d0-9152-1740ec2c5a76/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20210528 12:57:33.023" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20210528 12:57:32.887" endtime="20210528 12:57:33.024"/>
+</kw>
+<status status="PASS" starttime="20210528 12:57:32.886" endtime="20210528 12:57:33.024"/>
+</kw>
+<kw name="_Set text" library="browser">
+<arg>${password}</arg>
+<arg>@{txt_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}[0]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210528 12:57:33.025" level="INFO">Typing text 'admin123' into text field 'xpath://input[@id="txtPassword"]'.</msg>
+<msg timestamp="20210528 12:57:33.025" level="DEBUG">POST http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac/elements {"using": "xpath", "value": "//input[@id=\"txtPassword\"]"}</msg>
+<msg timestamp="20210528 12:57:33.037" level="DEBUG">http://127.0.0.1:62999 "POST /session/71349a39dcd063226c1d6c3cd3fa96ac/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210528 12:57:33.039" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210528 12:57:33.039" level="DEBUG">POST http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac/element/73a8b2cb-3ee0-4cef-8ba0-c106ad4b1b35/clear {"id": "73a8b2cb-3ee0-4cef-8ba0-c106ad4b1b35"}</msg>
+<msg timestamp="20210528 12:57:33.067" level="DEBUG">http://127.0.0.1:62999 "POST /session/71349a39dcd063226c1d6c3cd3fa96ac/element/73a8b2cb-3ee0-4cef-8ba0-c106ad4b1b35/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20210528 12:57:33.067" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210528 12:57:33.068" level="DEBUG">POST http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac/element/73a8b2cb-3ee0-4cef-8ba0-c106ad4b1b35/value {"text": "admin123", "value": ["a", "d", "m", "i", "n", "1", "2", "3"], "id": "73a8b2cb-3ee0-4cef-8ba0-c106ad4b1b35"}</msg>
+<msg timestamp="20210528 12:57:33.113" level="DEBUG">http://127.0.0.1:62999 "POST /session/71349a39dcd063226c1d6c3cd3fa96ac/element/73a8b2cb-3ee0-4cef-8ba0-c106ad4b1b35/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20210528 12:57:33.114" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20210528 12:57:33.024" endtime="20210528 12:57:33.114"/>
+</kw>
+<status status="PASS" starttime="20210528 12:57:33.024" endtime="20210528 12:57:33.114"/>
+</kw>
+<kw name="_Click" library="browser">
+<arg>@{btn_password}</arg>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${locator}[0]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210528 12:57:33.115" level="INFO">Clicking button 'xpath://input[@value="LOGIN"]'.</msg>
+<msg timestamp="20210528 12:57:33.115" level="DEBUG">POST http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac/elements {"using": "xpath", "value": "//input[@value=\"LOGIN\"]"}</msg>
+<msg timestamp="20210528 12:57:33.127" level="DEBUG">http://127.0.0.1:62999 "POST /session/71349a39dcd063226c1d6c3cd3fa96ac/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210528 12:57:33.127" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210528 12:57:33.127" level="DEBUG">GET http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac/element/c8579f5c-2ff8-4e40-9af6-3c442b848f23/name {"id": "c8579f5c-2ff8-4e40-9af6-3c442b848f23"}</msg>
+<msg timestamp="20210528 12:57:33.131" level="DEBUG">http://127.0.0.1:62999 "GET /session/71349a39dcd063226c1d6c3cd3fa96ac/element/c8579f5c-2ff8-4e40-9af6-3c442b848f23/name HTTP/1.1" 200 17</msg>
+<msg timestamp="20210528 12:57:33.131" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210528 12:57:33.132" level="DEBUG">POST http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac/element/c8579f5c-2ff8-4e40-9af6-3c442b848f23/click {"id": "c8579f5c-2ff8-4e40-9af6-3c442b848f23"}</msg>
+<msg timestamp="20210528 12:57:37.088" level="DEBUG">http://127.0.0.1:62999 "POST /session/71349a39dcd063226c1d6c3cd3fa96ac/element/c8579f5c-2ff8-4e40-9af6-3c442b848f23/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210528 12:57:37.089" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20210528 12:57:33.115" endtime="20210528 12:57:37.089"/>
+</kw>
+<status status="PASS" starttime="20210528 12:57:33.114" endtime="20210528 12:57:37.089"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210528 12:57:47.091" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210528 12:57:37.090" endtime="20210528 12:57:47.091"/>
+</kw>
+<status status="PASS" starttime="20210528 12:57:32.885" endtime="20210528 12:57:47.092"/>
+</kw>
+<kw name="__Exit OrangeHRM" library="common-page">
+<kw name="_Close browser" library="browser">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<msg timestamp="20210528 12:57:47.098" level="DEBUG">Closing browser with session id 71349a39dcd063226c1d6c3cd3fa96ac.</msg>
+<msg timestamp="20210528 12:57:47.098" level="DEBUG">DELETE http://127.0.0.1:62999/session/71349a39dcd063226c1d6c3cd3fa96ac {}</msg>
+<msg timestamp="20210528 12:57:47.241" level="DEBUG">http://127.0.0.1:62999 "DELETE /session/71349a39dcd063226c1d6c3cd3fa96ac HTTP/1.1" 200 14</msg>
+<msg timestamp="20210528 12:57:47.241" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20210528 12:57:47.097" endtime="20210528 12:57:49.359"/>
+</kw>
+<status status="PASS" starttime="20210528 12:57:47.095" endtime="20210528 12:57:49.360"/>
+</kw>
+<status status="PASS" starttime="20210528 12:57:47.093" endtime="20210528 12:57:49.360"/>
+</kw>
+<status status="PASS" starttime="20210528 12:57:27.893" endtime="20210528 12:57:49.361"/>
+</test>
+<status status="PASS" starttime="20210528 12:57:27.611" endtime="20210528 12:57:49.364"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Orange-Hrm-Test-Suite">Orange-Hrm-Test-Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,11 +1,10 @@
-*** Variables ***
-${url}            https://opensource-demo.orangehrmlive.com/
-${browser}        firefox
-${username}       Admin
-${password}       admin123
-
 *** Settings ***
+# App Specific Keywords
 Resource    app-orange-hrm${/}orange-hrm.robot
+# Conf
+Resource    resources${/}conf.robot
+# Testdata
+Resource    resources${/}orange-hrm-test-suite.robot
 
 *** Test Cases ***
 Login Test

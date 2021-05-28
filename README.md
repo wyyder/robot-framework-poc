@@ -14,7 +14,7 @@ src="https://img.shields.io/badge/-Subscribe-red?style=for-the-badge&logo=youtub
 
 | Youtube | Project | Technology |
 | --- | --- | --- |
-| <a href="https://www.youtube.com/watch?v=xl77kz4eIwU"><img alt="Youtube - Please Subscribe..." title="Please Subscribe..." src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/></a> | [Pure - Robot Framework - POC  (No Python / JAVA libraries)](https://github.com/wyyder/python-robot-framework-poc-microsoft-power-app/blob/master/README.md) |  Robot Framework / Selenium / Pycharm / VSCode |
+| <a href="https://www.youtube.com/watch?v=xl77kz4eIwU"><img alt="Youtube - Please Subscribe..." title="Please Subscribe..." src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/></a> | [Pure - Robot Framework - POC  (No Python / JAVA libraries)](https://github.com/wyyder/robot-framework-poc/blob/master/README.md) |  Robot Framework / Selenium / Pycharm / VSCode |
 
 # Pure - Robot Framework - POC  (No Python / JAVA libraries)
 
